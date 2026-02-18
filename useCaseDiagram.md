@@ -8,24 +8,22 @@ usecaseDiagram
     actor Mentor
     actor Admin
 
-    package Learnova_System {
-        usecase "Register" as UCS1
-        usecase "Login (JWT)" as UCS2
-        usecase "Manage Profile" as UCS3
-        usecase "List Skills" as UCM1
-        usecase "Set Availability" as UCM2
-        usecase "Browse Mentors" as UCS4
-        usecase "View Mentor Profile" as UCS5
-        usecase "Book Session" as UCS6
-        usecase "Manage Bookings" as UCCommon1
-        usecase "Complete Session" as UCM3
-        usecase "Cancel Session" as UCCommon2
-        usecase "Leave Review" as UCS7
-        usecase "View Reviews" as UCCommon3
-        usecase "Moderate Users" as UCA1
-        usecase "Moderate Content" as UCA2
-        usecase "View Analytics" as UCA3
-    }
+    usecase "Register" as UCS1
+    usecase "Login (JWT)" as UCS2
+    usecase "Manage Profile" as UCS3
+    usecase "List Skills" as UCM1
+    usecase "Set Availability" as UCM2
+    usecase "Browse Mentors" as UCS4
+    usecase "View Mentor Profile" as UCS5
+    usecase "Book Session" as UCS6
+    usecase "Manage Bookings" as UCCommon1
+    usecase "Complete Session" as UCM3
+    usecase "Cancel Session" as UCCommon2
+    usecase "Leave Review" as UCS7
+    usecase "View Reviews" as UCCommon3
+    usecase "Moderate Users" as UCA1
+    usecase "Moderate Content" as UCA2
+    usecase "View Analytics" as UCA3
 
     %% Relationships - Student
     Student --> UCS1
@@ -57,9 +55,9 @@ usecaseDiagram
     Admin --> UCA3
 
     %% Includes & Extends
-    UCS6 ..> UCS2 : <<include>>
-    UCM1 ..> UCS2 : <<include>>
-    UCA1 ..> UCS2 : <<include>>
+    UCS6 ..> UCS2 : include
+    UCM1 ..> UCS2 : include
+    UCA1 ..> UCS2 : include
 ```
 
 ## Description of Actors
