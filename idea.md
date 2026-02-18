@@ -1,9 +1,11 @@
-# Learnova: Peer-to-Peer Learning Marketplace - System Design Document
+# Learnova: Peer-to-Peer Learning Marketplace 
 
 ## 1. Project Overview
 **Learnova** is a cutting-edge Peer-to-Peer (P2P) Learning Marketplace designed to democratize access to knowledge. It serves as a bridge between individuals seeking to learn new skills (**Students**) and experts willing to share their knowledge (**Mentors**). By leveraging modern web technologies, Learnova ensures a seamless, secure, and scalable environment for scheduling, conducting, and reviewing learning sessions.
 
 The platform is built on the principles of **Clean Architecture**, ensuring specific layers of separation, maintainability, and scalability. It emphasizes robust object-oriented design patterns to handle complex business logic efficiently.
+Layered Clean Architecture (Controllers → Services → Repositories → Domain Models)
+
 
 ---
 
@@ -75,3 +77,13 @@ The scope of Learnova encompasses the entire lifecycle of a mentorship session:
 3.  **Security**: Strict validation and authorization policies to protect user data.
 4.  **Performance**: Optimized database queries and efficient API response times (<200ms).
 5.  **Extensibility**: The codebase should easily accommodate future features like video conferencing integration or advanced payment gateways.
+## Object-Oriented Design Principles
+
+The backend system follows core OOP principles:
+
+- Encapsulation: Each entity manages its own state and behavior.
+- Abstraction: Business logic is abstracted through service and repository layers.
+- Inheritance: Role-based users (Student, Mentor, Admin) extend the base User class.
+- Polymorphism: Common interfaces allow flexible handling of different user roles and operations.
+
+This ensures clean, maintainable, and scalable software design.
