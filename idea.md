@@ -86,4 +86,4 @@ The backend system follows core OOP principles:
 - Inheritance: Role-based users (Student, Mentor, Admin) extend the base User class.
 - Polymorphism: Common interfaces allow flexible handling of different user roles and operations.
 
-This ensures clean, maintainable, and scalable software design.
+
