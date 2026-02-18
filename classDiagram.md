@@ -1,4 +1,4 @@
-# 🏗️ Class Diagram - Learnova
+# Class Diagram - Learnova
 
 This diagram represents the Object-Oriented structure of the backend, following Clean Architecture principles. It highlights encapsulation, inheritance, and polymorphism.
 

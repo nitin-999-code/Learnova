@@ -1,4 +1,4 @@
-# 🔄 Sequence Diagrams - Learnova
+# Sequence Diagrams - Learnova
 
 This document details critical workflows within the Learnova system using sequence diagrams.
 

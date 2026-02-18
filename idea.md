@@ -1,4 +1,4 @@
-# 🚀 Learnova: Peer-to-Peer Learning Marketplace - System Design Document
+# Learnova: Peer-to-Peer Learning Marketplace - System Design Document
 
 ## 1. Project Overview
 **Learnova** is a cutting-edge Peer-to-Peer (P2P) Learning Marketplace designed to democratize access to knowledge. It serves as a bridge between individuals seeking to learn new skills (**Students**) and experts willing to share their knowledge (**Mentors**). By leveraging modern web technologies, Learnova ensures a seamless, secure, and scalable environment for scheduling, conducting, and reviewing learning sessions.
@@ -21,24 +21,24 @@ The scope of Learnova encompasses the entire lifecycle of a mentorship session:
 
 ## 3. Core Features
 
-### 🔐 Authentication & Security
+### Authentication & Security
 *   Secure Login/Register with **JWT (JSON Web Tokens)**.
 *   Role-Based Access Control (RBAC): **Student**, **Mentor**, **Admin**.
 *   Password hashing using robust algorithms (e.g., Argon2 or BCrypt).
 
-### 🎓 Mentors
+### Mentors
 *   **Profile Management**: Create detailed profiles highlighting expertise.
 *   **Skill Listing**: Add skills with proficiency levels and hourly rates.
 *   **Availability Management**: Define specific time slots for sessions.
 *   **Dashboard**: View upcoming bookings and earnings.
 
-### 📚 Students
+### Students
 *   **Search & Filter**: Find mentors by skill, price, or rating.
 *   **Booking System**: Book available slots for real-time interaction.
 *   **Session Management**: View past and upcoming sessions.
 *   **Reviews**: Rate mentors and leave detailed feedback.
 
-### 🛡️ Admin
+### Admin
 *   **User Moderation**: Ban or suspend violating users.
 *   **Content Oversight**: Review and approve/reject suspicious skill listings.
 *   **Platform Analytics**: View system-wide metrics.

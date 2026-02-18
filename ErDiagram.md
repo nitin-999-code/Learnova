@@ -1,4 +1,4 @@
-# 🗂️ Entity Relationship Diagram (ERD) - Learnova
+# Entity Relationship Diagram (ERD) - Learnova
 
 This document defines the database schema structure, focusing on data integrity, relationships, and scalability.
 
