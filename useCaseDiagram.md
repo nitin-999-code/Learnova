@@ -77,8 +77,29 @@ flowchart LR
     ModUser -.->|requires| Login
 ```
 
-## Description of Actors
-1.  **Student**: A user seeking to learn new skills. Can browse, book, and review mentors.
-2.  **Mentor**: A user offering expertise. Can list skills, set availability, and conduct sessions.
-    *   *Note: A user can potentially hold both roles, but interactions are distinct.*
-3.  **Admin**: System administrator responsible for platform health, moderation, and user management.
+## Actors & Key Responsibilities
+
+### Student
+The core consumer of the platform seeking knowledge.
+*   **Key Responsibilities**:
+    *   Register and maintain a personal profile.
+    *   Search for mentors based on skills and ratings.
+    *   Book and pay for learning sessions.
+    *   Attend sessions and provide reviews/ratings.
+
+### Mentor
+The expert provider sharing knowledge.
+*   **Key Responsibilities**:
+    *   Create a professional profile highlighting expertise.
+    *   List specific skills and set hourly rates.
+    *   Manage calendar availability for sessions.
+    *   Conduct sessions and track earnings.
+    *   *Note: A user can act as both a Student and a Mentor.*
+
+### Admin
+The system overseer ensuring quality and safety.
+*   **Key Responsibilities**:
+    *   Monitor platform health and analytics.
+    *   Moderate user accounts (ban/suspend violators).
+    *   Review and approve content or skill listings.
+    *   Resolve disputes between Students and Mentors.
