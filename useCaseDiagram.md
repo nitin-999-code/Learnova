@@ -1,63 +1,80 @@
 # Use Case Diagram - Learnova
 
-This document outlines the interactions between the primary actors (Student, Mentor, Admin) and the Learnova system.
+This document outlines the interactions between the primary actors (Student, Mentor, Admin) and the Learnova system, utilizing a GitHub-compatible flowchart to represent use cases.
 
 ```mermaid
-usecaseDiagram
-    actor Student
-    actor Mentor
-    actor Admin
+flowchart LR
+    %% Actors
+    Student((Student))
+    Mentor((Mentor))
+    Admin((Admin))
 
-    usecase "Register" as UCS1
-    usecase "Login (JWT)" as UCS2
-    usecase "Manage Profile" as UCS3
-    usecase "List Skills" as UCM1
-    usecase "Set Availability" as UCM2
-    usecase "Browse Mentors" as UCS4
-    usecase "View Mentor Profile" as UCS5
-    usecase "Book Session" as UCS6
-    usecase "Manage Bookings" as UCCommon1
-    usecase "Complete Session" as UCM3
-    usecase "Cancel Session" as UCCommon2
-    usecase "Leave Review" as UCS7
-    usecase "View Reviews" as UCCommon3
-    usecase "Moderate Users" as UCA1
-    usecase "Moderate Content" as UCA2
-    usecase "View Analytics" as UCA3
+    %% System Boundary
+    subgraph Learnova_System [Learnova System]
+        direction TB
+        
+        %% Auth
+        Register[Register]
+        Login[Login / Auth]
+        Profile[Manage Profile]
+
+        %% Discovery & Booking
+        Search[Browse Mentors & Skills]
+        ViewMentor[View Mentor Profile]
+        Book[Book Session]
+        
+        %% Session Management
+        ManageBookings[Manage Bookings]
+        Complete[Complete Session]
+        Cancel[Cancel Session]
+
+        %% Mentor Specific
+        ListSkills[List Skills]
+        Availability[Set Availability]
+
+        %% Feedback
+        Review[Leave Review]
+        ViewSystem[View Reviews]
+
+        %% Admin
+        ModUser[Moderate Users]
+        ModContent[Moderate Content]
+        Analytics[View Analytics]
+    end
 
     %% Relationships - Student
-    Student --> UCS1
-    Student --> UCS2
-    Student --> UCS3
-    Student --> UCS4
-    Student --> UCS5
-    Student --> UCS6
-    Student --> UCS7
-    Student --> UCCommon1
-    Student --> UCCommon2
-    Student --> UCCommon3
+    Student --> Register
+    Student --> Login
+    Student --> Profile
+    Student --> Search
+    Student --> ViewMentor
+    Student --> Book
+    Student --> ManageBookings
+    Student --> Cancel
+    Student --> Review
+    Student --> ViewSystem
 
     %% Relationships - Mentor
-    Mentor --> UCS1
-    Mentor --> UCS2
-    Mentor --> UCS3
-    Mentor --> UCM1
-    Mentor --> UCM2
-    Mentor --> UCM3
-    Mentor --> UCCommon1
-    Mentor --> UCCommon2
-    Mentor --> UCCommon3
+    Mentor --> Register
+    Mentor --> Login
+    Mentor --> Profile
+    Mentor --> ListSkills
+    Mentor --> Availability
+    Mentor --> ManageBookings
+    Mentor --> Complete
+    Mentor --> Cancel
+    Mentor --> ViewSystem
 
     %% Relationships - Admin
-    Admin --> UCS2
-    Admin --> UCA1
-    Admin --> UCA2
-    Admin --> UCA3
+    Admin --> Login
+    Admin --> ModUser
+    Admin --> ModContent
+    Admin --> Analytics
 
-    %% Includes & Extends
-    UCS6 ..> UCS2 : include
-    UCM1 ..> UCS2 : include
-    UCA1 ..> UCS2 : include
+    %% Internal Dependencies (Includes)
+    Book -.->|requires| Login
+    ListSkills -.->|requires| Login
+    ModUser -.->|requires| Login
 ```
 
 ## Description of Actors
